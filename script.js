@@ -10,22 +10,23 @@ for (let i = 0; i < 100; i++) {
   starsContainer.appendChild(star);
 }
 
-// Hide header on scroll down, show on scroll up
-let lastScrollTop = 0;
-const header = document.querySelector(".nav");
+// // Hide header on scroll down, show on scroll up
+// let scrollEnabled = true;
 
-window.addEventListener("scroll", () => {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+// window.addEventListener("scroll", () => {
+//   if (!scrollEnabled) return; // skip scroll logic
 
-  if (currentScroll > lastScrollTop) {
-    header.style.top = "-110px";
-    header.style.transition = "0.5s";
-  } else {
-    header.style.top = "0";
-  }
+//   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+//   if (currentScroll > lastScrollTop) {
+//     header.style.top = "-110px";
+//     header.style.transition = "0.5s";
+//   } else {
+//     header.style.top = "0";
+//   }
+
+//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+// });
 
 const menuBtn = document.getElementById("mobile-menu-button");
 const spans = menuBtn.querySelectorAll("span");
@@ -42,16 +43,17 @@ function spinMenuBtn() {
 
 menuBtn.addEventListener("click", () => {
   open = !open;
-
   spinMenuBtn();
 
   // Toggle menu visibility
   if (open) {
     mobileMenu.classList.remove("hidden");
     mobileMenu.classList.add("flex");
+    document.body.style.overflowY = "hidden";
   } else {
     mobileMenu.classList.add("hidden");
     mobileMenu.classList.remove("flex");
+    document.body.style.overflowY = "auto";
   }
 });
 // Close mobile menu on link click
@@ -61,6 +63,7 @@ mobileLinks.forEach((link) => {
     open = false;
     mobileMenu.classList.add("hidden");
     mobileMenu.classList.remove("flex");
+    document.body.style.overflowY = "auto";
     spinMenuBtn();
   });
 });

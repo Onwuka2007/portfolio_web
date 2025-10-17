@@ -113,13 +113,13 @@
 
     <!-- Navigation -->
     <nav
-      class="nav fixed top-0 w-full px-8 lg:px-20 py-6 flex justify-between items-center z-50 bg-black/80 backdrop-blur-md"
+      class="nav fixed top-0 w-full px-8 lg:px-20 py-3 md:py-6 flex justify-between items-center z-50 bg-black/20 backdrop-blur-lg"
     >
       <!-- Logo -->
       <div class="text-2xl font-bold tracking-wider gradient-text">
         <a href="#">
           <img
-            src="/ASSETS/main_logo_with_name.jpeg"
+            src="./ASSETS/main_logo_with_name.jpeg"
             alt="Logo"
             class="w-20 h-20 rounded-full inline bg-black"
           />
@@ -132,13 +132,14 @@
           <a href="#about" class="hover:text-purple-400 transition">About</a>
         </li>
         <li>
+          <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+        </li>
+        <li>
           <a href="#projects" class="hover:text-purple-400 transition"
             >Projects</a
           >
         </li>
-        <li>
-          <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
-        </li>
+
         <li>
           <a href="#contact" class="hover:text-purple-400 transition"
             >Contact</a
@@ -158,7 +159,7 @@
       </div>
 
       <!-- Hamburger Button -->
-      <div class="-mr-2 flex items-center md:hidden">
+      <div class="-mr-8 flex items-center md:hidden">
         <button
           id="mobile-menu-button"
           class="relative w-10 h-5 flex flex-col justify-between items-center group"
@@ -176,7 +177,7 @@
     <!-- Mobile Menu -->
     <div
       id="mobile-menu"
-      class="hidden flex flex-col items-center bg-black/90 backdrop-blur-sm  absolute top-[90px] left-0 w-full py-8 space-y-6 text-lg text-gray-300 z-40 transition-all duration-300"
+      class="hidden sticky flex flex-col items-center bg-black/90 backdrop-blur-sm absolut min-h-screen top-[90px] left-0 w-full py-8 space-y-6 text-lg text-gray-300 z-40 transition-all duration-300"
     >
       <a href="#about" class="hover:text-purple-400 transition">About</a>
       <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
@@ -241,7 +242,6 @@
 
     <!-- BG change -->
     <div class="backdrop-blur-[3px]">
-      
       <!-- About Section -->
       <section id="about" class="min-h-screen px-8 lg:px-20 py-20 relative">
         <div class="max-w-6xl mx-auto">
@@ -317,7 +317,7 @@
                 class="relative w-[18rem] h-[17rem] rounded-full overflow-hidden"
               >
                 <img
-                  src="/ASSETS/profile_icon.jpg"
+                  src="./ASSETS/profile_icon.jpg"
                   alt="Profile"
                   class="cursor-pointer w-full h-full object-cover hover:scale-105 blur-[2px] hover:blur-0 transition duration-700 ease-out border-2 border-transparent hover:border-purple-500 rounded-full profile-image"
                 />
@@ -328,8 +328,8 @@
       </section>
 
       <!-- Skills Section -->
-      <section id="skills" class="min-h-screen px-8 lg:px-20 py-20 relative">
-        <div class="max-w-7xl mx-auto">
+      <section id="skills" class="h-fit px-8 lg:px-20 py-20 relative">
+        <div class="max-w-7xl mx-auto cursor-pointer">
           <h2 class="text-2xl lg:text-4xl font-bold mb-14">
             My <span class="gradient-text italic animate-pulse">Toolbox</span>
           </h2>
@@ -337,13 +337,13 @@
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Frontend -->
             <div
-              class="skill-card bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+              class="skill-card bg-white/5 backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
             >
               <h3 class="text-xl font-bold mb-4">Frontend</h3>
               <ul class="space-y-6 text-gray-300">
-                <div class="w-full bg-white/10 rounded-full h-3">
+                <div class="w-full bg-white/10 rounded-full h-1">
                   <div
-                    class="bg-purple-500 h-3 rounded-full"
+                    class="bg-purple-500 h-1 rounded-full"
                     style="width: 60%"
                   ></div>
                 </div>
@@ -375,13 +375,13 @@
 
             <!-- Backend -->
             <div
-              class="skill-card bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+              class="skill-card bg-white/5 backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
             >
               <h3 class="text-xl font-bold mb-6">Backend</h3>
               <ul class="space-y-6 text-gray-300">
-                <div class="w-full bg-white/10 rounded-full h-3">
+                <div class="w-full bg-white/10 rounded-full h-1">
                   <div
-                    class="bg-purple-500 h-3 rounded-full"
+                    class="bg-purple-500 h-1 rounded-full"
                     style="width: 5%"
                   ></div>
                 </div>
@@ -400,7 +400,7 @@
 
             <!-- DevOps -->
             <!-- <div
-              class="skill-card bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+              class="skill-card bg-white/5 backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
             >
               <h3 class="text-2xl font-bold mb-4">DevOps</h3>
               <ul class="space-y-2 text-gray-300">
@@ -413,27 +413,28 @@
 
             <!-- Tools -->
             <div
-              class="skill-card bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+              class="skill-card bg-white/5 backdrop-blur-sm p-8 hover:bg-black/80 hover:backdrop-blur-md rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
             >
               <h3 class="text-xl font-bold mb-4">Other Skills</h3>
               <ul class="space-y-6 text-gray-300 text-sm">
-                <div class="w-full bg-white/10 rounded-full h-3">
+                <div class="w-full bg-white/10 rounded-full h-1">
                   <div
-                    class="bg-purple-500 h-3 rounded-full"
+                    class="bg-purple-500 h-1 rounded-full"
                     style="width: 5%"
                   ></div>
                 </div>
                 <li>
                   <i
-                    class="fa-brands fa-git-alt text-white bg-black inline border border-black py-2 px-3 rounded-full mr-2"
+                    class="fa-brands fa-github text-white bg-black inline border border-black py-2 px-3 rounded-full mr-2"
                   ></i
                   >Git / GitHub
                 </li>
+
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 128 128"
-                    class="w-10 h-10 inline mr-2 rounded-full p-1"
+                    class="w-10 h-7 inline mr-2 rounded-full p-1"
                   >
                     <path
                       fill="#007ACC"
@@ -451,6 +452,7 @@
                   VS Code
                   <span class="text-gray-500 text-[12px]">(Editor)</span>
                 </li>
+
                 <li>
                   <i
                     class="fa-brands fa-figma text-pink-500 inline py-2 px-3 rounded-full mr-4"
@@ -460,6 +462,7 @@
                     >(collaborate & integrate designs)</span
                   >
                 </li>
+
                 <li>
                   <i
                     class="fa-solid fa-chart-line text-white bg-green-500 inline border border-green-500 py-2 px-3 rounded-full mr-2"
@@ -475,10 +478,12 @@
       <!-- Projects Section -->
       <section id="projects" class="min-h-screen px-8 lg:px-20 py-20 relative">
         <div class="max-w-7xl mx-auto">
-          <h2 class="text-5xl lg:text-6xl font-bold mb-16 uppercase">
-            Featured <span class="gradient-text">Projects</span>
+          <h2 class="text-2xl lg:text-4xl font-bold mb-14">
+            My
+            <span class="gradient-text italic animate-pulse"
+              >Work & Projects</span
+            >
           </h2>
-
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Project 1 -->
             <!-- <div
@@ -612,127 +617,147 @@
         class="min-h-screen px-8 lg:px-20 py-20 relative flex items-center"
       >
         <div class="max-w-7xl mx-auto w-full">
-          <h2
-            class="text-5xl lg:text-6xl font-bold mb-16 uppercase text-center"
-          >
-            Get In <span class="gradient-text">Touch</span>
+          <h2 class="text-2xl lg:text-4xl font-bold mb-14">
+            Have Something
+            <span class="gradient-text italic animate-pulse"> In Mind?</span>
           </h2>
 
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="flex flex-col space-y-6">
             <!-- Contact Info -->
             <div class="space-y-8">
-              <p class="text-xl text-gray-300 leading-relaxed">
+              <p class="text-gray-300 leading-relaxed">
                 Have a project in mind or want to collaborate? I'd love to hear
                 from you. Let's create something amazing together.
               </p>
 
               <div class="space-y-6">
                 <div class="flex items-center gap-4">
-                  <div
-                    class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-xl"
+                  <a
+                    href="mailto:themannyverse@gmail.com"
+                    class="flex space-x-4"
                   >
-                    📧
-                  </div>
-                  <div>
-                    <div class="text-gray-400 text-sm">Email</div>
-                    <div class="text-lg">hello@devspace.com</div>
-                  </div>
+                    <div
+                      class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                      <p class="text-gray-400">Email</p>
+                      <p>themannyverse@gmail.com</p>
+                    </div>
+                  </a>
                 </div>
 
                 <div class="flex items-center gap-4">
-                  <div
-                    class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-xl"
-                  >
-                    📱
-                  </div>
-                  <div>
-                    <div class="text-gray-400 text-sm">Phone</div>
-                    <div class="text-lg">+1 (234) 567-8900</div>
-                  </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                  <div
-                    class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-xl"
-                  >
-                    📍
-                  </div>
-                  <div>
-                    <div class="text-gray-400 text-sm">Location</div>
-                    <div class="text-lg">San Francisco, CA</div>
-                  </div>
+                  <a href="tel:08131163888" class="flex space-x-4">
+                    <div
+                      class="w-12 h-12 rounded-full bg bg-gradient-to-r from-purple-500 to-purple-700 items-center justify-center flex"
+                    >
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                      <p class="text-gray-400">Phone</p>
+                      <p>+(234) 813 1163 888</p>
+                    </div>
+                  </a>
                 </div>
               </div>
 
-              <div class="flex gap-4 pt-6">
-                <a
-                  href="#"
-                  class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700 hover:border-transparent transition-all duration-300"
-                  >GH</a
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center"
                 >
-                <a
-                  href="#"
-                  class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700 hover:border-transparent transition-all duration-300"
-                  >LI</a
-                >
-                <a
-                  href="#"
-                  class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700 hover:border-transparent transition-all duration-300"
-                  >TW</a
-                >
-                <a
-                  href="#"
-                  class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700 hover:border-transparent transition-all duration-300"
-                  >EM</a
-                >
+                  <i class="fa-solid fa-location-pin"></i>
+                </div>
+                <div>
+                  <p class="text-gray-400">Location</p>
+                  <p class="text-lg">Lagos, NG</p>
+                </div>
               </div>
             </div>
 
-            <!-- Contact Form -->
-            <div
-              class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10"
-            >
-              <div class="space-y-6">
-                <div>
-                  <label class="block text-sm font-semibold mb-2 text-gray-300"
-                    >Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-sm font-semibold mb-2 text-gray-300"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-sm font-semibold mb-2 text-gray-300"
-                    >Message</label
-                  >
-                  <textarea
-                    rows="5"
-                    class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-purple-500 transition-colors"
-                    placeholder="Tell me about your project..."
-                  ></textarea>
-                </div>
-
-                <button
-                  class="w-full bg-gradient-to-r from-purple-500 to-purple-700 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+            <div class="flex gap-4 py-10">
+              <a
+                href="https://github.com/Onwuka2007"
+                class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700 hover:border-transparent transition-all duration-300"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/emmanuel-onwuka-5a3a95303"
+                class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700 hover:border-transparent transition-all duration-300"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href="https://twitter.com/themannyverse"
+                class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700 hover:border-transparent transition-all duration-300"
+              >
+                <!-- <i class="fa-brands fa-x-twitter"></i> -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="w-6 h-6 bg-white rounded-full p-1"
                 >
-                  Send Message
-                </button>
-              </div>
+                  <path
+                    d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://youtube.com/@themannyverse"
+                class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-700 hover:border-transparent transition-all duration-300"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
             </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10"
+          >
+            <form class="space-y-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-gray-300"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="w-full bg-black/20 backdrop-blur-lg border border-white/10 rounded-lg px-4 py-3 focus:bg-black focus:outline-none focus:border-purple-500 transition-colors text-[14px]"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-gray-300"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="w-full bg-black/20 backdrop-blur-lg border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:bg-black focus:border-purple-500 transition-colors text-[14px]"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-gray-300"
+                  >Message</label
+                >
+                <textarea
+                  rows="5"
+                  class="w-full bg-black/20 backdrop-blur-lg border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:bg-black focus:border-purple-500 transition-colors text-[14px]"
+                  placeholder="Message here..."
+                ></textarea>
+              </div>
+
+              <button
+                class="w-full bg-purple-500 py-4 rounded-lg font-semibold hover:bg-purple-600 transition-all duration-300"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </section>
