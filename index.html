@@ -11,10 +11,13 @@
     />
 
     <!-- Poppins Google Font -->
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
-    />
+    /> 
+      style="font-family: Poppins, sans-serif"
+    -->
+
     <link rel="shortcut icon" href="ASSETS/favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
 
@@ -27,7 +30,6 @@
 
   <body
     class="bg-black text-white overflow-x-hidden -m-4 p-0 md:m-0 box-border"
-    style="font-family: 'Poppins', sans-serif"
   >
     <!-- Stars Background -->
     <div class="fixed inset-0 pointer-events-none" id="stars"></div>
@@ -228,14 +230,14 @@
                 Computer Science. Since then, I’ve been learning HTML, CSS, and
                 JavaScript through self-study.
               </p>
-              <p class="md:text-lg text-[14px] text-gray-400 leading-relaxed">
+              <p class="text-gray-400 leading-relaxed">
                 <!-- Today, I turn ideas into production-ready apps that solve real
                 problems. -->
                 Still early in my career, but eager to grow and make an impact.
                 I’m passionate about clean code, intuitive UX, and scalable,
                 SEO-friendly architecture.
               </p>
-              <p class="md:text-lg text-[14px] text-gray-400 leading-relaxed">
+              <p class="text-gray-400 leading-relaxed">
                 Here are a few technologies I work with:
               </p>
 
@@ -562,6 +564,58 @@
                   View Project →
                 </a>
               </div>
+            </div>
+          </div>
+
+          <div class="text-center my-10">
+            <a
+              href="#"
+              class="inline-flex items-center justify-center px-6 py-2 border border-purple-400 text-purple-400 rounded-lg hover:bg-purple-500/10 group transition-all duration-300"
+            >
+              <span>More projects</span>
+              <span
+                class="inline-block transform translate-x-0 opacity-0 group-hover:translate-x-2 group-hover:opacity-100 transition-all duration-300 ease-out"
+              >
+                <i class="fas fa-arrow-right ml-2"></i>
+              </span>
+            </a>
+          </div>
+
+          <!-- Open source contribution -->
+          <div id="open-source" class="my-10">
+            <h2 class="text-2xl font-bold mb-4 gradient-text animate-pulse">
+              Open Source Contributions
+            </h2>
+            <div
+              class="bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-md hover:border-purple-500/50 group hover:bg-black transition"
+            >
+              <h3
+                class="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
+              >
+                FindIt App
+              </h3>
+              <p class="mt-2">
+                Contributed to
+                <a
+                  href="https://github.com/GDGBabcockUniversity/hacktoberfest-findit/pull/12"
+                  class="text-purple-400 hover:underline"
+                >
+                  GDGBabcockUniversity Findit App</a
+                >
+                by improving responsiveness and modernizing the base layout and
+                navigation.
+              </p>
+              <ul class="list-disc ml-5 mt-2 text-[13px] text-gray-300">
+                <li>Enhanced responsiveness and global styles</li>
+                <li>Modernized UI components</li>
+                <li>Clean merge — Pull Request accepted and merged</li>
+              </ul>
+              <a
+                href="https://github.com/GDGBabcockUniversity/hacktoberfest-findit/pull/12"
+                target="_blank"
+                class="inline-block mt-3 text-purple-400 hover:underline"
+                >View PR on GitHub →</a
+              >
             </div>
           </div>
         </div>
