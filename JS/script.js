@@ -1,4 +1,7 @@
 "use strict";
+// Set current yearLL
+document.getElementById("year").textContent = new Date().getFullYear();
+
 // Generate stars
 const starsContainer = document.getElementById("stars");
 for (let i = 0; i < 100; i++) {
@@ -67,3 +70,4 @@ mobileLinks.forEach((link) => {
     spinMenuBtn();
   });
 });
+
