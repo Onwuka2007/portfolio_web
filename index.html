@@ -51,9 +51,7 @@
           <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
         </li>
         <li>
-          <a
-            href="my-other-projects.html"
-            class="hover:text-purple-400 transition"
+          <a href="/projects.html" class="hover:text-purple-400 transition"
             >Projects</a
           >
         </li>
@@ -71,7 +69,7 @@
       <!-- Resume Button -->
       <div class="hidden md:flex gap-4">
         <a
-          href="resume.pdf"
+          href="/ASSETS/docs/resume.pdf"
           target="_blank"
           class="px-6 py-3 bg-transparent text-[14px] text-purple-400 border border-purple-400 rounded-lg font-medium transition hover:bg-purple-500/10"
         >
@@ -113,7 +111,7 @@
         <a href="/blog.html" class="hover:text-purple-400 transition">Blog</a>
 
         <a
-          href="resume.pdf"
+          href="/ASSETS/docs/resume.pdf"
           target="_blank"
           class="px-6 py-2 border border-purple-400 text-purple-400 rounded-lg hover:bg-purple-500/10"
         >
@@ -165,10 +163,17 @@
       class="min-h-screen flex items-center px-8 lg:px-20 relative overflow-hidden"
     >
       <div class="max-w-5xl z-10 pt-20">
-        <p class="text-sm tracking-wide text-purple-400 mb-3 font-medium">
-          Hey, I'm Manny 👋
+        <!-- switching text -->
+        <p class="text-sm text-purple-400 tracking-wide mb-3">
+          <span
+            id="changing-text"
+            class="inline-block transition-opacity duration-700 ease-in-out"
+          >
+            Hey, I'm Manny 👋
+          </span>
         </p>
 
+        <!-- my tagline -->
         <h1 class="text-3xl lg:text-6xl font-extrabold leading-tight mb-6">
           Turning Ideas into Code - Code Into Art
         </h1>
@@ -220,12 +225,13 @@
 
           <div class="grid lg:grid-cols-2 gap-10 items-center">
             <!-- Text First -->
-            <div class="space-y-6">
+            <div class="space-y-6 md:mb-0 mb-8">
               <h3 class="md:text-lg font-bold text-white">meet Emmanuel,</h3>
-              <p class="text-gray-300 leading-relaxed">
-                I started my web dev journey in 2022 when I chose to major in
-                Computer Science. Since then, I’ve been learning HTML, CSS, and
-                JavaScript through self-study.
+              <p class="text-gray-400 leading-relaxed">
+                I started my web dev journey in
+                <span class="text-purple-400 font-semibold">2022</span> when I
+                chose to major in Computer Science. Since then, I’ve been
+                learning HTML, CSS, and JavaScript through self-study.
               </p>
               <p class="text-gray-400 leading-relaxed">
                 <!-- Today, I turn ideas into production-ready apps that solve real
@@ -269,6 +275,17 @@
                   </li>
                 </ul>
               </div>
+
+              <a
+                href="/ASSETS/docs/resume.pdf"
+                target="_blank"
+                class="inline-flex items-center group mt-6 px-6 py-3 bg-transparent text-[14px] text-purple-400 border border-purple-400 rounded-lg font-medium transition hover:bg-purple-500/10"
+              >
+                View Resume
+                <i
+                  class="fas fa-arrow-right ml-2 transform transition-all duration-300 ease-out group-hover:translate-x-2 group-hover:opacity-100 opacity-1 md:opacity-0"
+                ></i>
+              </a>
             </div>
 
             <!-- Image Second -->
@@ -562,7 +579,7 @@
 
           <div class="text-center my-10">
             <a
-              href="my-other-projects.html"
+              href="/projects.html"
               class="inline-flex items-center justify-center px-6 py-2 border border-purple-400 text-purple-400 rounded-lg hover:bg-purple-500/10 group transition-all duration-300"
             >
               <span>More projects</span>

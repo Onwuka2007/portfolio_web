@@ -71,3 +71,25 @@ mobileLinks.forEach((link) => {
   });
 });
 
+// switching text
+const roles = [
+  "Hey, I'm Manny 👋",
+  "Aspiring Fullstack Developer",
+  "Creative Engineer",
+  "Code Artist",
+  "Problem Solver",
+];
+
+let index = 0;
+const changingText = document.getElementById("changing-text");
+
+setInterval(() => {
+  index = (index + 1) % roles.length;
+  changingText.classList.add("opacity-0"); // fade out
+
+  setTimeout(() => {
+    changingText.textContent = roles[index];
+    changingText.classList.remove("opacity-0"); // fade in
+  }, 500);
+
+}, 2500);
