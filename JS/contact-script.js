@@ -1,3 +1,6 @@
+const successMssg = document.getElementById("success-mssg");
+const failedMssg = document.getElementById("failed-mssg");
+
 // Initialize EmailJS
 emailjs.init("zTFz29WcYt1J2pwvr");
 
@@ -9,12 +12,22 @@ contactForm.addEventListener("submit", function (e) {
   // Send to your inbox
   emailjs.sendForm("service_1oqb5d8", "template_f7vskyi", this).then(
     () => {
-      console.log("Message sent to inbox!");
-      alert("Your message has been sent!");
+      successMssg.style.display = "block";
+      successMssg.textContent = "Sent! I'll respond as soon as possible 👌";
+
+      // Hide after 4 seconds
+      setTimeout(() => {
+        successMssg.style.display = "none";
+      }, 4000);
     },
     (error) => {
-      console.error("Inbox send error:", error);
-      alert("Failed to send message. Try again.");
+      failedMssg.style.display = "block";
+      failedMssg.textContent = "Aw Snap! Something went wrong 😔";
+
+      // Hide after 4 seconds
+      setTimeout(() => {
+        failedMssg.style.display = "none";
+      }, 4000);
     }
   );
 
@@ -28,6 +41,5 @@ contactForm.addEventListener("submit", function (e) {
     }
   );
 
-  // Reset the form
   this.reset();
 });

@@ -1,115 +1,3 @@
-// // Set current year
-// document.getElementById("year").textContent = new Date().getFullYear();
-
-// // Fetch Medium posts
-// async function fetchMediumPosts() {
-//   const username = "themannyverse"; // Your Medium username
-//   const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`;
-
-//   try {
-//     const response = await fetch(rssUrl);
-//     const data = await response.json();
-
-//     if (data.status === "ok") {
-//       displayPosts(data.items);
-//     } else {
-//       showError();
-//     }
-//   } catch (error) {
-//     console.error("Error fetching posts:", error);
-//     showError();
-//   }
-// }
-
-// function displayPosts(posts) {
-//   const postsContainer = document.getElementById("posts");
-//   const loading = document.getElementById("loading");
-
-//   loading?.classList.add("hidden");
-//   postsContainer?.classList.remove("hidden");
-
-//   posts.forEach((post) => {
-//     const postCard = createPostCard(post);
-//     postsContainer.appendChild(postCard);
-//   });
-// }
-
-// function createPostCard(post) {
-//   const card = document.createElement("article");
-//   card.className = "blog-card rounded-xl p-6 flex flex-col";
-
-//   // Extract all images from content
-//   const imgRegexGlobal = /<img.*?src="(.*?)"/g;
-//   let imgMatch;
-//   let imageUrl = "";
-//   const fallbackImage = "/ASSETS/fallback_image_for_medium.jpg"; // your local fallback image
-
-//   while ((imgMatch = imgRegexGlobal.exec(post.content)) !== null) {
-//     const src = imgMatch[1];
-//     // Ignore Medium tracking pixels
-//     if (!src.includes("medium.com/_/stat")) {
-//       imageUrl = src;
-//       break;
-//     }
-//   }
-
-//   // Use fallback if no image found
-//   if (!imageUrl) {
-//     imageUrl = fallbackImage;
-//   }
-
-//   // Extract text preview
-//   const textContent = post.content.replace(/<[^>]+>/g, "").substring(0, 150);
-
-//   // Format date
-//   const date = new Date(post.pubDate).toLocaleDateString("en-US", {
-//     year: "numeric",
-//     month: "short",
-//     day: "numeric",
-//   });
-
-// card.innerHTML = `
-//   <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-md hover:shadow-purple-700/10 hover:border-purple-500/50 transition-all duration-300 flex flex-col h-full">
-
-//     <!-- Image -->
-//     <div class="overflow-hidden">
-//       <img
-//         src="${imageUrl}"
-//         alt="${post.title}"
-//         class="w-full h-48 object-cover px-2 rounded-lg transform scale-105 group-hover:scale-110 transition-transform duration-700"
-//       />
-//     </div>
-
-//     <!-- Content -->
-//     <div class="flex-1 p-6 flex flex-col">
-//       <p class="text-purple-400 text-sm mb-2">${date}</p>
-//       <h2 class="text-xl font-bold mb-3 line-clamp-2">${post.title}</h2>
-//       <p class="text-gray-400 text-sm mb-4 line-clamp-3">${textContent}...</p>
-
-//       <!-- Button at bottom -->
-//       <a
-//         href="${post.link}"
-//         target="_blank"
-//         rel="noopener noreferrer"
-//         class="mt-auto inline-block px-4 py-2 border border-purple-400 text-purple-400 rounded-lg hover:bg-purple-500/10 text-sm text-center transition"
-//       >
-//         Read More →
-//       </a>
-//     </div>
-//   </div>
-// `;
-
-//   return card;
-// }
-
-// function showError() {
-//   document.getElementById("loading")?.classList.add("hidden");
-//   document.getElementById("error")?.classList.remove("hidden");
-// }
-
-// // Initialize
-// fetchMediumPosts();
-
 // Set current year
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -177,24 +65,34 @@ function createMediumCard(post) {
   const card = document.createElement("article");
   card.className = "blog-card rounded-xl p-6 flex flex-col";
 
-  // Extract all images from content
+  // Regex setup
+  const imgRegex = /<img.*?src="(.*?)"/;
   const imgRegexGlobal = /<img.*?src="(.*?)"/g;
-  let imgMatch;
-  let imageUrl = "";
-  const fallbackImage = "/ASSETS/fallback_image_for_medium.jpg"; // your local fallback image
 
-  while ((imgMatch = imgRegexGlobal.exec(post.content)) !== null) {
-    const src = imgMatch[1];
-    // Ignore Medium tracking pixels
-    if (!src.includes("medium.com/_/stat")) {
+  // Fallback images
+  const fallbackImages = [
+    "/ASSETS/fallbacks/img1.jpg",
+    "/ASSETS/fallbacks/img2.jpeg",
+    "/ASSETS/fallbacks/img3.jpg",
+  ];
+
+  const randomFallback =
+    fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
+
+  // Try to find an image in post content
+  let imageUrl = randomFallback;
+  let match;
+
+  while ((match = imgRegexGlobal.exec(post.content)) !== null) {
+    const src = match[1];
+    if (
+      src &&
+      !src.includes("medium.com/_/stat") &&
+      !src.includes("transparent")
+    ) {
       imageUrl = src;
       break;
     }
-  }
-
-  // Use fallback if no image found
-  if (!imageUrl) {
-    imageUrl = fallbackImage;
   }
 
   // Extract text preview
@@ -207,10 +105,10 @@ function createMediumCard(post) {
     day: "numeric",
   });
 
+  // Create card HTML
   card.innerHTML = `
     <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-md hover:shadow-purple-700/10 hover:border-purple-500/50 transition-all duration-300 flex flex-col h-full">
       
-      <!-- Image -->
       <div class="overflow-hidden">
         <img 
           src="${imageUrl}" 
@@ -219,13 +117,11 @@ function createMediumCard(post) {
         />
       </div>
 
-      <!-- Content -->
       <div class="flex-1 p-6 flex flex-col">
         <p class="text-purple-400 text-sm mb-2">${date}</p>
         <h2 class="text-xl font-bold mb-3 line-clamp-2">${post.title}</h2>
         <p class="text-gray-400 text-sm mb-4 line-clamp-3">${textContent}...</p>
         
-        <!-- Button at bottom -->
         <a href="${post.link}" 
            target="_blank" 
            rel="noopener noreferrer"
