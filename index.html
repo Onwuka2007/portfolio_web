@@ -11,7 +11,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="shortcut icon" href="ASSETS/images/favicon.png" type="image/png" />
+    <link
+      rel="shortcut icon"
+      href="ASSETS/images/favicon.png"
+      type="image/png"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <!-- EmailJS Script -->
@@ -37,7 +41,7 @@
           <img
             src="./ASSETS/images/main_logo_with_name.jpeg"
             alt="Logo"
-            class="w-20 h-20 rounded-full inline bg-black"
+            class="w-14 h-14 md:w-20 md:h-20 rounded-full inline bg-black"
           />
         </a>
       </div>
@@ -319,9 +323,11 @@
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Frontend -->
             <div
-              class="skill-card bg-white/5 backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+              class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
             >
-              <h3 class="text-xl font-bold mb-4">Frontend</h3>
+              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-4">
+                Frontend
+              </h3>
               <ul class="space-y-6 text-gray-300">
                 <div class="w-full bg-white/10 rounded-full h-1">
                   <div
@@ -333,22 +339,28 @@
                 <!-- <li>React / Next.js</li> -->
                 <!-- <li>TypeScript</li> -->
                 <li>
-                  <i
-                    class="fa-brands fa-html5 text-white bg-orange-500 inline border border-orange-500 py-2 px-3 rounded-full mr-2"
-                  ></i>
+                  <div
+                    class="inline-flex items-center justify-center w-7 h-7 bg-orange-500 rounded-full mr-2"
+                  >
+                    <i class="fa-brands fa-html5 text-white text-[15px]"></i>
+                  </div>
                   HTML5
                 </li>
+
                 <li>
-                  <i
-                    class="fa-brands fa-css3-alt text-black bg-blue-500 inline border border-blue-500 py-2 px-3 rounded-full mr-2"
-                  ></i>
+                  <div
+                    class="inline-flex items-center justify-center w-7 h-7 bg-blue-500 rounded-full mr-2"
+                  >
+                    <i class="fa-brands fa-css3-alt text-white text-[15px]"></i>
+                  </div>
                   CSS3
                 </li>
+
                 <li>
                   <img
                     src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tailwindcss.svg"
                     alt="Tailwind CSS Logo"
-                    class="w-10 h-10 inline mr-2 bg-cyan-400 rounded-full p-1"
+                    class="w-7 h-7 inline mr-2 bg-cyan-400 rounded-full p-1"
                   />
                   Tailwind CSS
                 </li>
@@ -357,9 +369,11 @@
 
             <!-- Backend -->
             <div
-              class="skill-card bg-white/5 backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+              class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
             >
-              <h3 class="text-xl font-bold mb-6">Backend</h3>
+              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-6">
+                Backend
+              </h3>
               <ul class="space-y-6 text-gray-300">
                 <div class="w-full bg-white/10 rounded-full h-1">
                   <div
@@ -372,32 +386,23 @@
                 <!-- <li>PostgreSQL</li> -->
                 <!-- <li>MongoDB</li> -->
                 <li>
-                  <i
-                    class="fa-brands fa-php text-white bg-blue-500 inline border border-blue-500 py-2 px-3 rounded-full mr-2"
-                  ></i
-                  >Basic PHP
+                  <div
+                    class="inline-flex items-center justify-center w-7 h-7 bg-blue-500 rounded-full mr-2"
+                  >
+                    <i class="fa-brands fa-php text-white text-[15px]"></i>
+                  </div>
+                  Basic PHP
                 </li>
               </ul>
             </div>
 
-            <!-- DevOps -->
-            <!-- <div
-              class="skill-card bg-white/5 backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
-            >
-              <h3 class="text-2xl font-bold mb-4">DevOps</h3>
-              <ul class="space-y-2 text-gray-300">
-                <li>AWS / Azure</li>
-                <li>Docker</li>
-                <li>CI/CD</li>
-                <li>Kubernetes</li>
-              </ul>
-            </div> -->
-
             <!-- Tools -->
             <div
-              class="skill-card bg-white/5 backdrop-blur-sm p-8 hover:bg-black/80 hover:backdrop-blur-md rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+              class="skill-card bg-white/5 group backdrop-blur-sm p-8 hover:bg-black/80 hover:backdrop-blur-md rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
             >
-              <h3 class="text-xl font-bold mb-4">Other Skills</h3>
+              <h3 class="text-xl font-bold group-hover:text-purple-400 mb-4">
+                Other Skills
+              </h3>
               <ul class="space-y-6 text-gray-300 text-sm">
                 <div class="w-full bg-white/10 rounded-full h-1">
                   <div
@@ -405,49 +410,56 @@
                     style="width: 90%"
                   ></div>
                 </div>
-                <li>
-                  <i
-                    class="fa-brands fa-github text-white bg-black inline border border-black py-2 px-3 rounded-full mr-2"
-                  ></i
-                  >Git / GitHub
-                </li>
 
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 128 128"
-                    class="w-10 h-7 inline mr-2 rounded-full p-1"
+                <li class="flex items-center">
+                  <div
+                    class="inline-flex items-center justify-center w-7 h-7 bg-black rounded-full mr-3"
                   >
-                    <path
-                      fill="#007ACC"
-                      d="M2.56 18.48v91.04l49.28-35.52L2.56 18.48z"
-                    />
-                    <path
-                      fill="#1F9CF0"
-                      d="M121.44 54.08v19.84L68.48 128V0l52.96 54.08z"
-                    />
-                    <path
-                      fill="#007ACC"
-                      d="M68.48 128L68.48 0 36.48 25.6v76.8l32 25.6z"
-                    />
-                  </svg>
+                    <i class="fa-brands fa-github text-white text-[15px]"></i>
+                  </div>
+                  Git / GitHub
+                </li>
+
+                <li class="flex items-center">
+                  <div
+                    class="inline-flex items-center justify-center w-7 h-7 bg-[#007ACC] rounded-full mr-3"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 128 128"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        fill="#fff"
+                        d="M2.56 18.48v91.04l49.28-35.52L2.56 18.48zM121.44 54.08v19.84L68.48 128V0l52.96 54.08zM68.48 128L68.48 0 36.48 25.6v76.8l32 25.6z"
+                      />
+                    </svg>
+                  </div>
                   VS Code
-                  <span class="text-gray-500 text-[12px]">(Editor)</span>
+                  <span class="text-gray-500 text-[12px] ml-1">(Editor)</span>
                 </li>
 
-                <li>
-                  <i
-                    class="fa-brands fa-figma text-pink-500 inline py-2 px-3 rounded-full mr-4"
-                  ></i
-                  >Figma
-                  <span class="text-gray-500 text-[12px]">(integration)</span>
+                <li class="flex items-center">
+                  <div
+                    class="inline-flex items-center justify-center w-7 h-7 bg-pink-500 rounded-full mr-3"
+                  >
+                    <i class="fa-brands fa-figma text-white text-[15px]"></i>
+                  </div>
+                  Figma
+                  <span class="text-gray-500 text-[12px] ml-1"
+                    >(integration)</span
+                  >
                 </li>
 
-                <li>
-                  <i
-                    class="fa-solid fa-chart-line text-white bg-green-500 inline border border-green-500 py-2 px-3 rounded-full mr-2"
-                  ></i
-                  >SEO Optimization
+                <li class="flex items-center">
+                  <div
+                    class="inline-flex items-center justify-center w-7 h-7 bg-green-500 rounded-full mr-3"
+                  >
+                    <i
+                      class="fa-solid fa-chart-line text-white text-[14px]"
+                    ></i>
+                  </div>
+                  SEO Optimization
                 </li>
               </ul>
             </div>
@@ -590,12 +602,15 @@
               </span>
             </a>
           </div>
-
           <!-- Open source contribution -->
-          <div id="open-source" class="mt-20 mb-10">
-            <h2 class="text-2xl font-bold mb-8 gradient-text animate-pulse">
+          <div class="mt-20 mb-10">
+            <h2
+              class="text-2xl font-bold mb-8 gradient-text flex items-center gap-2"
+            >
+              <i class="fa-solid fa-code-merge text-xl"></i>
               Open Source Contributions
             </h2>
+
             <div
               class="bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-md hover:border-purple-500/50 group hover:bg-black transition"
             >
@@ -634,7 +649,7 @@
       <!-- Contact Section -->
       <section
         id="contact"
-        class="min-h-screen px-8 lg:px-20 py-20 relative flex items-center"
+        class="min-h-screen px-8 md:px-20 py-20 relative flex items-center"
       >
         <div class="max-w-7xl mx-auto w-full">
           <h2 class="text-2xl lg:text-4xl font-bold mb-14">
@@ -735,7 +750,7 @@
 
           <!-- Contact Form -->
           <div
-            class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10"
+            class="bg-white/5 backdrop-blur-sm px-3 py-6 md:p-8 rounded-2xl border border-white/10"
           >
             <form class="space-y-6">
               <div>
@@ -800,7 +815,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="px-8 lg:px-20 py-8 border-t border-white/10">
+    <footer class="px-4 lg:px-20 py-8 border-t border-white/10 text-[13px]">
       <div
         class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
       >
