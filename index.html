@@ -105,9 +105,7 @@
       <!-- Menu list -->
       <div class="flex flex-col items-center py-8 space-y-6">
         <a href="#about" class="hover:text-purple-400 transition">About</a>
-        <a
-          href="my-other-projects.html"
-          class="hover:text-purple-400 transition"
+        <a href="projects.html" class="hover:text-purple-400 transition"
           >Projects</a
         >
         <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
@@ -220,22 +218,25 @@
     <!-- BG change -->
     <div class="backdrop-blur-[3px]">
       <!-- About Section -->
-      <section id="about" class="min-h-screen px-8 lg:px-20 py-20 relative">
+      <section
+        id="about"
+        class="min-h-screen px-8 lg:px-20 py-20 relative"
+      >
         <div class="max-w-6xl mx-auto">
           <h2 class="text-2xl lg:text-4xl font-bold mb-14">
             Hello
             <span class="gradient-text italic animate-pulse"> World!</span>
           </h2>
 
-          <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <article class="grid lg:grid-cols-2 gap-10 items-center">
             <!-- Text First -->
             <div class="space-y-6 md:mb-0 mb-8">
-              <h3 class="md:text-lg font-bold text-white">meet Emmanuel,</h3>
+              <h3 class="md:text-lg text-sm font-bold text-white">meet Emmanuel,</h3>
               <p class="text-gray-400 leading-relaxed">
-                I started my web dev journey in
-                <span class="text-purple-400 font-semibold">2022</span> when I
-                chose to major in Computer Science. Since then, I’ve been
-                learning HTML, CSS, and JavaScript through self-study.
+                I started my web dev journey in 2022 when I chose to major in
+                Computer Science. Since then, I’ve been learning HTML, CSS, and
+                JavaScript through
+                <span class="text-purple-400 font-semibold">self-study</span>.
               </p>
               <p class="text-gray-400 leading-relaxed">
                 <!-- Today, I turn ideas into production-ready apps that solve real
@@ -245,7 +246,14 @@
                 SEO-friendly architecture.
               </p>
               <p class="text-gray-400 leading-relaxed">
-                Here are a few technologies I work with:
+                I’m working toward becoming a
+                <span class="text-purple-400 font-semibold"
+                  >full-stack developer</span
+                >, who brings ideas to life through code, creativity and intuitive user experiences.
+              </p>
+
+              <p class="text-gray-400 leading-relaxed">
+                Here are a few technologies I work with currently:
               </p>
 
               <!-- Recent Technologies -->
@@ -264,17 +272,17 @@
                     <span>CSS3</span>
                   </li>
                   <li>
-                    <i class="fa-solid fa-arrow-right text-purple-600"></i>
+                    <i class="fa-solid fa-arrow-right text-purple-600 text-[10px]"></i>
                     <span>JavaScript ES6+</span>
                   </li>
                 </ul>
                 <ul class="space-y-2">
                   <li>
-                    <i class="fa-solid fa-arrow-right text-purple-600"></i>
+                    <i class="fa-solid fa-arrow-right text-purple-600 text-[10px]"></i>
                     <span>Tailwind CSS</span>
                   </li>
                   <li>
-                    <i class="fa-solid fa-arrow-right text-purple-600"></i>
+                    <i class="fa-solid fa-arrow-right text-purple-600 text-[10px]"></i>
                     <span>PHP</span>
                   </li>
                 </ul>
@@ -309,7 +317,7 @@
                 />
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -413,7 +421,7 @@
 
                 <li class="flex items-center">
                   <div
-                    class="inline-flex items-center justify-center w-7 h-7 bg-black rounded-full mr-3"
+                    class="inline-flex items-center justify-center w-7 h-7 bg-black group-hover:bg-white/10 rounded-full mr-3"
                   >
                     <i class="fa-brands fa-github text-white text-[15px]"></i>
                   </div>
@@ -518,6 +526,10 @@
                   >
                   <span
                     class="bg-purple-600/20 text-purple-300 text-xs px-2 py-1 rounded-full"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="bg-purple-600/20 text-purple-300 text-xs px-2 py-1 rounded-full"
                     >FormSpree</span
                   >
                 </div>
@@ -605,9 +617,9 @@
           <!-- Open source contribution -->
           <div class="mt-20 mb-10">
             <h2
-              class="text-2xl font-bold mb-8 gradient-text flex items-center gap-2"
+              class="text-xl md:text-2xl font-bold mb-8 gradient-text flex items-center gap-2"
             >
-              <i class="fa-solid fa-code-merge text-xl"></i>
+              <i class="fa-solid fa-code-merge text-sm"></i>
               Open Source Contributions
             </h2>
 

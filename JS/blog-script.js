@@ -39,7 +39,7 @@ function displayPosts(posts) {
     {
       embed:
         "https://www.linkedin.com/embed/feed/update/urn:li:share:7374477308092600320?collapsed=1",
-      title: "LinkedIn Post",
+      title: "My experience on learning TailwindCSS",
       content:
         "Last week I decided to learn Tailwind CSS. This is how it went...",
       pubDate: new Date().toISOString(),
