@@ -41,6 +41,9 @@ input:-webkit-autofill {
     transform: translateY(-30px);
   }
 }
+.image-movement {
+  animation: float 8.5s ease-in-out infinite;
+}
 
 @keyframes twinkle {
   0%,
@@ -50,10 +53,6 @@ input:-webkit-autofill {
   50% {
     opacity: 1;
   }
-}
-
-.image-movement {
-  animation: float 8.5s ease-in-out infinite;
 }
 
 .star {
