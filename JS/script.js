@@ -91,5 +91,4 @@ setInterval(() => {
     changingText.textContent = roles[index];
     changingText.classList.remove("opacity-0"); // fade in
   }, 500);
-
 }, 2500);

@@ -7,7 +7,7 @@
       name="description"
       content="Fullstack Developer | Ideas into Code, Code Into Art"
     />
-    <title>Onwuka Emmanuel | Aspiring fullstack developer</title>
+    <title>Onwuka Emmanuel | Frontend Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- cdn font awesome -->
@@ -32,12 +32,18 @@
   <body
     class="bg-black text-white overflow-x-hidden -m-4 p-0 md:m-0 box-border"
   >
+    <!-- cursor mving glow -->
+    <div
+      id="spotlight"
+      class="pointer-events-none fixed w-60 h-60 rounded-full bg-purple-500/10 blur-3xl"
+    ></div>
+
     <!-- Stars Background -->
     <div class="fixed inset-0 pointer-events-none" id="stars"></div>
 
     <!-- Navigation -->
     <nav
-      class="nav fixed top-0 w-full px-8 lg:px-20 py-3 md:py-6 flex justify-between items-center z-50 bg-black/20 backdrop-blur-lg"
+      class="nav fixed top-0 w-full px-8 lg:px-20 py-3 flex justify-between items-center z-50 bg-black/20 backdrop-blur-lg"
     >
       <!-- Logo -->
       <div class="text-2xl font-bold tracking-wider gradient-text">
@@ -45,7 +51,7 @@
           <img
             src="./ASSETS/images/main_logo_with_name.jpeg"
             alt="Logo"
-            class="w-14 h-14 md:w-20 md:h-20 rounded-full inline bg-black"
+            class="w-14 h-14 md:w-16 md:h-16 rounded-full inline bg-black"
           />
         </a>
       </div>
@@ -177,328 +183,316 @@
       </div>
     </div>
 
-    <!-- Hero Section -->
     <section
-      class="min-h-screen flex items-center px-8 lg:px-20 relative overflow-hidden"
+      class="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-8 lg:px-20 gap-10 relative overflow-hidden py-20"
     >
-      <div class="max-w-5xl z-10 pt-20">
-        <!-- switching text -->
-        <p class="text-sm text-purple-400 tracking-wide mb-3">
+      <!-- LEFT -->
+      <div class="max-w-5xl z-10 space-y-6">
+        <p class="text-sm text-purple-400 tracking-wide">
           <span
             id="changing-text"
             class="inline-block transition-opacity duration-700 ease-in-out"
           >
-            Hey, I'm Manny 👋
+            Hey, I'm Emmanuel 👋
           </span>
         </p>
 
-        <!-- my tagline -->
-        <h1 class="text-3xl lg:text-6xl font-extrabold leading-tight mb-6">
-          Turning Ideas into Code - Code Into Art
+        <h1 class="text-3xl lg:text-5xl font-extrabold max-w-xl">
+          Turning Ideas into Code – Code Into Art
         </h1>
 
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Fullstack dev passionate about clean interfaces, smooth UX, and ideas
-          that actually <span class="text-purple-400">mean something</span>.
+        <p class="text-gray-300 leading-relaxed max-w-xl">
+          Frontend developer focused on smooth UX, clean visuals, and turning
+          ideas
+          <span class="text-purple-400">into real products</span>.
         </p>
 
-        <p class="text-gray-400 leading-relaxed mb-10">
-          Currently exploring the balance between design and logic — crafting
-          products that don’t just work, but
-          <span class="text-purple-400">feel right</span>.
+        <p class="text-gray-400 leading-relaxed max-w-xl">
+          Currently leveling up with modern tools and building projects that not
+          only work — but <span class="text-purple-400">feel great</span>.
         </p>
 
+        <!-- CTA -->
         <div class="flex flex-col md:flex-row text-center gap-4">
           <a
             href="projects.html"
-            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition"
+            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition inline-flex items-center justify-center"
           >
             <i class="fa-solid fa-folder-open"></i>&nbsp; See My Projects
           </a>
           <a
             href="#contact"
-            class="px-6 py-3 border border-purple-500 hover:bg-purple-500/10 rounded-lg text-purple-300 font-medium transition"
+            class="px-6 py-3 border border-purple-500 hover:bg-purple-500/10 rounded-lg text-purple-300 font-medium transition inline-flex items-center justify-center"
           >
-            Get In Touch&nbsp;
+            Send a Message&nbsp;
             <i class="fa-solid fa-paper-plane"></i>
           </a>
         </div>
 
-        <a href="#about">
+        <!-- Scroll down btn -->
+        <a
+          href="#about"
+          class="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2"
+        >
           <i
-            class="fa-solid fa-arrow-down animate-bounce absolute border border-purple-500 p-2 w-10 h-10 rounded-full text-center bottom-10 left-1/2 -translate-x-1/2 text-purple-500 opacity-70"
+            class="fa-solid fa-arrow-down animate-bounce border border-purple-500 p-2 w-10 h-10 rounded-full text-center text-purple-500 opacity-70"
           ></i>
         </a>
+      </div>
+
+      <!-- my image -->
+      <div class="relative w-60 h-60 sm:w-72 sm:h-72 m-auto md:mx-20">
+        <div
+          class="absolute bg-purple-500/40 rounded-full md:h-[18.5rem] md:w-[18.5rem] blur-[10px]"
+        ></div>
+
+        <div
+          class="image-movement relative w-full h-full rounded-full overflow-hidden z-10 group"
+        >
+          <img
+            src="./ASSETS/images/image-about-me-profile.jpg"
+            alt="mee"
+            class="grayscale-[1] blur-[1px] group-hover:blur-[0] group-hover:grayscale-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition duration-700 cursor-pointer"
+          />
+        </div>
       </div>
     </section>
 
     <!-- BG change -->
-    <div class="backdrop-blur-[3px]">
+    <div class="backdrop-blur-[3px] text-left px-8 lg:px-40">
       <!-- About Section -->
-      <section id="about" class="min-h-screen px-8 lg:px-20 py-20 relative">
+      <section id="about" class="min-h-screen py-10 relative">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-2xl lg:text-4xl font-bold mb-14">
             Hello
-            <span class="gradient-text italic animate-pulse"> World!</span>
+            <span class="gradient-text italic animate-pulse">World!</span>
           </h2>
 
-          <article class="grid lg:grid-cols-2 gap-10 items-center">
-            <!-- Text First -->
+          <article class="gap-10 items-start">
+            <!-- Text -->
             <div class="space-y-6 md:mb-0 mb-8">
               <h3 class="md:text-lg text-sm font-bold text-white">
                 meet Emmanuel,
               </h3>
+
               <p class="text-gray-400 leading-relaxed">
-                I started my web dev journey in 2022 when I chose to major in
-                Computer Science. Since then, I’ve been learning HTML, CSS, and
-                JavaScript through
-                <span class="text-purple-400 font-semibold">self-study</span>.
+                I kicked off my web dev journey in 2022 while studying Computer
+                Science. Since then, I’ve been learning and building with HTML,
+                CSS, and JavaScript through self‑study and small projects.
               </p>
+
               <p class="text-gray-400 leading-relaxed">
-                <!-- Today, I turn ideas into production-ready apps that solve real
-                problems. -->
-                Still early in my career, but eager to grow and make an impact.
-                I’m passionate about clean code, intuitive UX, and scalable,
-                SEO-friendly architecture.
-              </p>
-              <p class="text-gray-400 leading-relaxed">
-                I’m working toward becoming a
+                I'm a growing
                 <span class="text-purple-400 font-semibold"
-                  >full-stack developer</span
-                >, who brings ideas to life through code, creativity and
-                intuitive user experiences.
+                  >Frontend Developer</span
+                >
+                focused on creating clean, responsive UI with good UX and
+                maintainable code.
               </p>
 
               <p class="text-gray-400 leading-relaxed">
-                Here are a few technologies I work with currently:
+                Currently building real‑world projects and learning modern tools
+                to deliver smooth experiences.
               </p>
 
-              <!-- Recent Technologies -->
-              <div class="flex space-x-10 text-gray-400 text-[13px]">
-                <ul class="space-y-2">
-                  <li>
-                    <i
-                      class="fa-solid fa-arrow-right text-purple-600 text-[10px]"
-                    ></i>
+              <p class="text-gray-400 leading-relaxed font-semibold">
+                <span class="text-purple-400 font-semibold">My toolbox:</span>
+              </p>
+
+              <div class="text-white text-xs">
+                <ul class="flex flex-wrap gap-4">
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/html5.svg" class="w-5 h-5" />
                     <span>HTML5</span>
                   </li>
-                  <li>
-                    <i
-                      class="fa-solid fa-arrow-right text-purple-600 text-[10px]"
-                    ></i>
+
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/css3.svg" class="w-5 h-5" />
                     <span>CSS3</span>
                   </li>
-                  <li>
-                    <i
-                      class="fa-solid fa-arrow-right text-purple-600 text-[10px]"
-                    ></i>
-                    <span>JavaScript ES6+</span>
+
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/tailwind.svg" class="w-7 h-7" />
+                    <span>Tailwind</span>
                   </li>
-                </ul>
-                <ul class="space-y-2">
-                  <li>
-                    <i
-                      class="fa-solid fa-arrow-right text-purple-600 text-[10px]"
-                    ></i>
-                    <span>Tailwind CSS</span>
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img
+                      src="/ASSETS/icons/js.svg"
+                      class="w-5 h-5 rounded-full"
+                    />
+                    <span>JavaScript</span>
                   </li>
-                  <li>
-                    <i
-                      class="fa-solid fa-arrow-right text-purple-600 text-[10px]"
-                    ></i>
+
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/react.svg" class="w-5 h-5" />
+                    <span>ReactJS</span>
+                  </li>
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img
+                      src="/ASSETS/icons/seo.svg"
+                      class="w-5 h-5 bg-white p-1 rounded-full"
+                    />
+                    <span>SEO Optimization</span>
+                  </li>
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/git.svg" class="w-6 h-6" />
+                    <span>Git</span>
+                  </li>
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img
+                      src="/ASSETS/icons/github.svg"
+                      class="w-5 h-5 bg-white p-1 rounded-full"
+                    />
+                    <span>GitHub</span>
+                  </li>
+                  <li
+                    class="border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/vscode.svg" class="w-5 p-0.5 h-5" />
+                    <span>VS Code</span>
+                  </li>
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img
+                      src="/ASSETS/icons/php.svg"
+                      class="w-5 h-5 rounded-full"
+                    />
                     <span>PHP</span>
                   </li>
+
+                  <li
+                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/figma.svg" class="w-5 h-5" />
+                    <span>Figma</span
+                    ><span class="text-gray-400 text-[11px]"
+                      >(integration)</span
+                    >
+                  </li>
+
+                  <li
+                    class="border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img
+                      src="/ASSETS/icons/vercel.svg"
+                      class="w-5 h-5 bg-white rounded-full p-0.5"
+                    />
+                    <span>Vercel</span>
+                  </li>
                 </ul>
-              </div>
-
-              <a
-                href="/ASSETS/docs/resume.pdf"
-                target="_blank"
-                class="inline-flex items-center group mt-6 px-6 py-3 bg-transparent text-[14px] text-purple-400 border border-purple-400 rounded-lg font-medium transition hover:bg-purple-500/10"
-              >
-                View Resume
-                <i
-                  class="fas fa-arrow-right ml-2 transform transition-all duration-300 ease-out group-hover:translate-x-2 group-hover:opacity-100 opacity-1 md:opacity-0"
-                ></i>
-              </a>
-            </div>
-
-            <!-- Image Second -->
-            <div
-              class="image-movement flex md:justify-start justify-center relative"
-            >
-              <!-- Slight background blur frame -->
-              <div class="absolute -inset-4 rounded-full blur-2xl"></div>
-
-              <div
-                class="relative w-[18rem] h-[17rem] rounded-full overflow-hidden"
-              >
-                <img
-                  src="./ASSETS/images/image-about-me-profile.jpg"
-                  alt="Profile"
-                  class="profile-image cursor-pointer w-full h-full object-cover hover:scale-105 blur-[1.5px] bg-purple-600/50 hover:blur-0 transition duration-700 ease-out border-2 border-transparent hover:border-purple-500 rounded-full"
-                />
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="h-fit px-8 lg:px-20 py-20 relative">
-        <div class="max-w-7xl mx-auto cursor-pointer">
+      <!-- Services Section -->
+      <section id="services" class="h-fit py-10 relative text-left">
+        <div class="max-w-5xl mx-auto cursor-pointer">
           <h2 class="text-2xl lg:text-4xl font-bold mb-14">
-            My <span class="gradient-text italic animate-pulse">Toolbox</span>
+            What I <span class="gradient-text italic animate-pulse">Offer</span>
           </h2>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Frontend -->
-            <div
-              class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
-            >
-              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-4">
-                Frontend
-              </h3>
-              <ul class="space-y-6 text-gray-300">
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div
-                    class="bg-purple-500 h-1 rounded-full"
-                    style="width: 60%"
-                  ></div>
-                </div>
-
-                <!-- <li>React / Next.js</li> -->
-                <!-- <li>TypeScript</li> -->
-
-                <li>
-                  <img
-                    src="/ASSETS/icons/html5.svg"
-                    alt="html5"
-                    class="w-7 h-7 inline mr-1 rounded-full px-0.5"
-                  />
-                  HTML5
-                </li>
-
-                <li>
-                  <img
-                    src="/ASSETS/icons/css3.svg"
-                    alt="css"
-                    class="w-7 h-7 inline mr-1 rounded-full px-0.5"
-                  />
-                  CSS3
-                </li>
-
-                <li>
-                  <img
-                    src="/ASSETS/icons/tailwind.svg"
-                    alt="tailwind"
-                    class="w-7 h-7 inline mr-1 rounded-full px-0.5"
-                  />
-                  Tailwind
-                </li>
-
-                <li>
-                  <img
-                    src="/ASSETS/icons/react.svg"
-                    alt="react"
-                    class="w-7 h-7 inline mr-1 rounded-full px-0.5"
-                  />
-                  React
-                </li>
-              </ul>
-            </div>
-
-            <!-- Backend -->
+            <!-- Web Development -->
             <div
               class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
             >
-              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-6">
-                Backend
+              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-4">
+                Web Development
               </h3>
-              <ul class="space-y-6 text-gray-300">
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div
-                    class="bg-purple-500 h-1 rounded-full"
-                    style="width: 5%"
-                  ></div>
-                </div>
-                <!-- <li>Node.js / Express</li> -->
-                <!-- <li>Python / Django</li> -->
-                <!-- <li>PostgreSQL</li> -->
-                <!-- <li>MongoDB</li> -->
-
-                <!-- <li>
-                  <div
-                    class="inline-flex items-center justify-center w-7 h-7 bg-blue-500 rounded-full mr-2"
-                  >
-                    <i class="fa-brands fa-php text-white text-[15px]"></i>
-                  </div>
-                  Basic PHP
-                </li> -->
-                <li>
-                  <img
-                    src="/ASSETS/icons/php.svg"
-                    alt="php"
-                    class="w-7 h-7 inline mr-1 rounded-full px-0.5"
-                  />
-                  PHP
-                </li>
+              <ul class="space-y-4 text-gray-300 text-sm list-disc">
+                <li>Responsive Websites</li>
+                <li>Clean HTML, CSS & Tailwind</li>
+                <li>Interactive UI & JavaScript Logic</li>
+                <li>React Components (Entry Level)</li>
               </ul>
             </div>
 
-            <!-- Tools -->
+            <!-- Frontend Features -->
             <div
-              class="skill-card bg-white/5 group backdrop-blur-sm p-8 hover:bg-black/80 hover:backdrop-blur-md rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
+              class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
             >
-              <h3 class="text-xl font-bold group-hover:text-purple-400 mb-4">
-                Other Skills
+              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-4">
+                Frontend Features
               </h3>
-              <ul class="space-y-6 text-gray-300 text-sm">
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div
-                    class="bg-purple-500 h-1 rounded-full"
-                    style="width: 90%"
-                  ></div>
-                </div>
+              <ul class="space-y-4 text-gray-300 text-sm list-disc">
+                <li>Interactive UI Elements</li>
+                <li>Form Validation</li>
+                <li>Animations & Micro-Interactions</li>
+                <li>Accessibility & UX Best Practices</li>
+              </ul>
+            </div>
 
-                <li>
-                  <img
-                    src="/ASSETS/icons/version-control.svg"
-                    alt="git"
-                    class="w-6 h-6 inline mr-2 bg-white rounded-full"
-                  />
-                  Version Control
-                </li>
+            <!-- SEO & Optimization -->
+            <div
+              class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
+            >
+              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-4">
+                SEO & Optimization
+              </h3>
+              <ul class="space-y-4 text-gray-300 text-sm list-disc">
+                <li>Performance & Page Speed</li>
+                <li>Semantic HTML & Accessibility</li>
+                <li>XML Sitemaps</li>
+              </ul>
+            </div>
 
-                <li>
-                  <img
-                    src="/ASSETS/icons/vscode.svg"
-                    alt="vscode"
-                    class="w-6 h-6 inline mr-2 rounded-full px-0.5"
-                  />
-                  VS Code
-                </li>
+            <!-- Version Control -->
+            <div
+              class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
+            >
+              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-4">
+                Version Control
+              </h3>
+              <ul class="space-y-4 text-gray-300 text-sm list-disc">
+                <li>Git & GitHub Workflow</li>
+                <li>Branching & Merging</li>
+                <li>Collaboration on Projects</li>
+              </ul>
+            </div>
 
-                <li>
-                  <img
-                    src="/ASSETS/icons/figma.svg"
-                    alt="html5"
-                    class="w-7 h-7 inline mr-1 rounded-full px-0.5"
-                  />
-                  Figma
-                  <span class="text-gray-500 italic text-xs ml-1"
-                    >(integration)</span
-                  >
-                </li>
+            <!-- Deployment & Hosting -->
+            <div
+              class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
+            >
+              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-4">
+                Deployment & Hosting
+              </h3>
+              <ul class="space-y-4 text-gray-300 text-sm list-disc">
+                <li>Deploy to Vercel & Netlify</li>
+                <li>Domain Setup</li>
+                <li>Continuous Integration (CI) Setup</li>
+              </ul>
+            </div>
 
-                <li>
-                  <img
-                    src="/ASSETS/icons/seo.svg"
-                    alt="seo"
-                    class="w-6 h-6 inline mr-2 bg-white rounded-full px-0.5"
-                  />
-                  SEO Optimization
-                </li>
+            <div
+              class="skill-card bg-white/5 group backdrop-blur-sm hover:bg-black/80 hover:backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]"
+            >
+              <h3 class="text-xl group-hover:text-purple-400 font-bold mb-4">
+                Maintenance
+              </h3>
+              <ul class="space-y-4 text-gray-300 text-sm list-disc">
+                <li>Performance Monitoring</li>
+                <li>Continuous Updates & Maintenance</li>
+                <li>Environment & Config Management</li>
               </ul>
             </div>
           </div>
@@ -506,7 +500,7 @@
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="min-h-screen px-8 md:px-20 py-20 relative">
+      <section id="projects" class="min-h-screen py-10 relative">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-2xl lg:text-4xl font-bold mb-14">
             My
@@ -514,7 +508,7 @@
               >Work & Projects</span
             >
           </h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="grid md:grid-cols-2 gap-8">
             <!-- Project 1 -->
             <div
               class="group relative bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-500/50 rounded-xl overflow-hidden transition-all duration-300 shadow-md hover:shadow-purple-700/10"
@@ -532,7 +526,7 @@
                 </a>
               </div>
 
-              <div class="p-6 group-hover:bg-black">
+              <div class="skill-card p-6 group-hover:bg-black">
                 <h3
                   class="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
                 >
@@ -594,7 +588,7 @@
                 </a>
               </div>
 
-              <div class="p-6 group-hover:bg-black">
+              <div class="skill-card p-6 group-hover:bg-black">
                 <h3
                   class="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
                 >
@@ -650,16 +644,11 @@
             <h2
               class="text-xl md:text-2xl font-bold mb-8 gradient-text flex items-center gap-2"
             >
-              <img
-                src="/ASSETS/icons/git-branch.svg"
-                class="w-5 h-4"
-                alt="git"
-              />
-              Open Source Contributions
+              Key Contributions
             </h2>
 
             <div
-              class="bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-md hover:border-purple-500/50 group hover:bg-black transition"
+              class="skill-card bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-md hover:border-purple-500/50 group hover:bg-black transition"
             >
               <h3
                 class="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
@@ -695,8 +684,8 @@
 
       <!-- Contact Me Section -->
       <section
+        class="min-h-screen py-10 relative flex items-center"
         id="contact"
-        class="min-h-screen px-8 md:px-20 py-20 relative flex items-center"
       >
         <div class="max-w-7xl mx-auto w-full">
           <h2 class="text-2xl lg:text-4xl font-bold mb-14">
@@ -886,7 +875,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="px-4 lg:px-20 py-8 border-t border-white/10 text-[13px]">
+    <footer class="py-8 border-t border-white/10 text-[13px]">
       <div
         class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
       >
