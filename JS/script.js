@@ -4,7 +4,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // Generate stars
 const starsContainer = document.getElementById("stars");
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 75; i++) {
   const star = document.createElement("div");
   star.className = "star absolute w-0.5 h-0.5 bg-white rounded-full";
   star.style.left = Math.random() * 100 + "%";
@@ -12,24 +12,6 @@ for (let i = 0; i < 100; i++) {
   star.style.animationDelay = Math.random() * 3 + "s";
   starsContainer.appendChild(star);
 }
-
-// // Hide header on scroll down, show on scroll up
-// let scrollEnabled = true;
-
-// window.addEventListener("scroll", () => {
-//   if (!scrollEnabled) return; // skip scroll logic
-
-//   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-//   if (currentScroll > lastScrollTop) {
-//     header.style.top = "-110px";
-//     header.style.transition = "0.5s";
-//   } else {
-//     header.style.top = "0";
-//   }
-
-//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-// });
 
 const menuBtn = document.getElementById("mobile-menu-button");
 const spans = menuBtn.querySelectorAll("span");
@@ -73,8 +55,7 @@ mobileLinks.forEach((link) => {
 
 // switching text
 const roles = [
-  "Hey, I'm Manny 👋",
-  "Aspiring Fullstack Developer",
+  "website developer",
   "Creative Engineer",
   "Code Artist",
   "Problem Solver",
@@ -84,11 +65,21 @@ let index = 0;
 const changingText = document.getElementById("changing-text");
 
 setInterval(() => {
-  index = (index + 1) % roles.length;
-  changingText.classList.add("opacity-0"); // fade out
+  changingText.classList.add(
+    "-translate-y-2",
+    "opacity-0",
+    "transition-all",
+    "duration-500"
+  );
 
   setTimeout(() => {
-    changingText.textContent = roles[index];
-    changingText.classList.remove("opacity-0"); // fade in
+    index = (index + 1) % roles.length;
+    changingText.textContent = roles[index].toUpperCase();
+    changingText.classList.remove("-translate-y-2", "opacity-0");
   }, 500);
 }, 2500);
+
+// smooth scrool with Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});

@@ -15,35 +15,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link
-      rel="shortcut icon"
-      href="ASSETS/images/favicon.png"
-      type="image/png"
-    />
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- EmailJS Script -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
+
+    <!-- smooth scrool with Lenis -->
+    <script src="https://unpkg.com/lenis@1.3.14/dist/lenis.min.js"></script>
   </head>
 
   <body
     class="bg-black text-white overflow-x-hidden -m-4 p-0 md:m-0 box-border"
   >
-    <!-- cursor mving glow -->
-    <div
-      id="spotlight"
-      class="pointer-events-none fixed w-60 h-60 rounded-full bg-purple-500/10 blur-3xl"
-    ></div>
-
-    <!-- Stars Background -->
-    <div class="fixed inset-0 pointer-events-none" id="stars"></div>
-
     <!-- Navigation -->
     <nav
-      class="nav fixed top-0 w-full px-8 lg:px-20 py-3 flex justify-between items-center z-50 bg-black/20 backdrop-blur-lg"
+      class="nav fixed top-0 w-full px-10 py-3 flex justify-between items-center z-50 bg-black/20 backdrop-blur-lg"
     >
       <!-- Logo -->
       <div class="text-2xl font-bold tracking-wider gradient-text">
@@ -183,83 +174,102 @@
       </div>
     </div>
 
+    <!-- HERO SECTION -->
     <section
-      class="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-8 lg:px-20 gap-10 relative overflow-hidden py-20"
+      class="relative bg-black text-white min-h-screen flex items-center px-10 md:px-20 overflow-hidden mt-8 md:mt-0"
     >
-      <!-- LEFT -->
-      <div class="max-w-5xl z-10 space-y-6">
-        <p class="text-sm text-purple-400 tracking-wide">
-          <span
-            id="changing-text"
-            class="inline-block transition-opacity duration-700 ease-in-out"
-          >
-            Hey, I'm Emmanuel 👋
-          </span>
-        </p>
+      <!-- Stars Background -->
+      <div class="fixed inset-0 pointer-events-none z-0" id="stars"></div>
 
-        <h1 class="text-3xl lg:text-5xl font-extrabold max-w-xl">
-          Turning Ideas into Code – Code Into Art
-        </h1>
-
-        <p class="text-gray-300 leading-relaxed max-w-xl">
-          Frontend developer focused on smooth UX, clean visuals, and turning
-          ideas
-          <span class="text-purple-400">into real products</span>.
-        </p>
-
-        <p class="text-gray-400 leading-relaxed max-w-xl">
-          Currently leveling up with modern tools and building projects that not
-          only work — but <span class="text-purple-400">feel great</span>.
-        </p>
-
-        <!-- CTA -->
-        <div class="flex flex-col md:flex-row text-center gap-4">
-          <a
-            href="projects.html"
-            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition inline-flex items-center justify-center"
-          >
-            <i class="fa-solid fa-folder-open"></i>&nbsp; See My Projects
-          </a>
-          <a
-            href="#contact"
-            class="px-6 py-3 border border-purple-500 hover:bg-purple-500/10 rounded-lg text-purple-300 font-medium transition inline-flex items-center justify-center"
-          >
-            Send a Message&nbsp;
-            <i class="fa-solid fa-paper-plane"></i>
-          </a>
-        </div>
-
-        <!-- Scroll down btn -->
-        <a
-          href="#about"
-          class="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2"
-        >
-          <i
-            class="fa-solid fa-arrow-down animate-bounce border border-purple-500 p-2 w-10 h-10 rounded-full text-center text-purple-500 opacity-70"
-          ></i>
-        </a>
-      </div>
-
-      <!-- my image -->
-      <div class="relative w-60 h-60 sm:w-72 sm:h-72 m-auto md:mx-20">
+      <!-- Content -->
+      <div
+        class="relative z-20 flex flex-col md:flex-row items-center justify-center w-full gap-10 md:gap-0"
+      >
+        <!-- Big Circle -->
         <div
-          class="absolute bg-purple-500/40 rounded-full md:h-[18.5rem] md:w-[18.5rem] blur-[10px]"
-        ></div>
-
-        <div
-          class="image-movement relative w-full h-full rounded-full overflow-hidden z-10 group"
+          class="size-[300px] md:w-[450px] md:h-[450px] rounded-full bg-gray-400/30 flex-shrink-0 relative overflow-hidden shadow-xl shadow-purple-400/50 border border-black/40"
         >
           <img
-            src="./ASSETS/images/image-about-me-profile.jpg"
-            alt="mee"
-            class="grayscale-[1] blur-[1px] group-hover:blur-[0] group-hover:grayscale-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition duration-700 cursor-pointer"
+            src="./ASSETS/images/vscode.png"
+            alt="Code Background"
+            class="w-full h-full object-cover image-movement"
           />
+
+          <!-- Dark overlay -->
+          <div class="absolute inset-0 bg-black/50"></div>
         </div>
+
+        <!-- TEXT AREA -->
+        <div
+          class="flex flex-col gap-4 md:gap-6 text-center md:text-left md:-ml-20 z-10"
+        >
+          <h1
+            class="text-6xl md:text-8xl font-black tracking-widest"
+            style="text-shadow: 2px 2px 4px rgba(226, 50, 226, 0.6)"
+          >
+            CREATIVE
+          </h1>
+          <h2
+            class="text-4xl md:text-6xl font-black tracking-widest text-[#bab8b8]"
+          >
+            DEVELOPER
+          </h2>
+          <p
+            class="text-[#827f7f] text-lg md:text-xl tracking-wider font-bold"
+            id="changing-text"
+          >
+            FRONTEND DEVELOPER
+          </p>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="absolute right-5 bottom-2 md:bottom-10 tracking-widest text-gray-300 text-xs flex items-center gap-2 font-semibold cursor-default"
+      >
+        EXPLORE MY WORK
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+        >
+          <rect width="24" height="24" fill="none" />
+          <g
+            fill="none"
+            stroke="#fff"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path stroke-dasharray="20" stroke-dashoffset="20" d="M12 3l0 17.5">
+              <animate
+                fill="freeze"
+                attributeName="stroke-dashoffset"
+                dur="0.2s"
+                values="20;0"
+              />
+            </path>
+            <path
+              stroke-dasharray="12"
+              stroke-dashoffset="12"
+              d="M12 21l7 -7M12 21l-7 -7"
+            >
+              <animate
+                fill="freeze"
+                attributeName="stroke-dashoffset"
+                begin="0.2s"
+                dur="0.2s"
+                values="12;0"
+              />
+            </path>
+          </g>
+        </svg>
       </div>
     </section>
 
     <!-- BG change -->
-    <div class="backdrop-blur-[3px] text-left px-8 lg:px-40">
+    <div class="backdrop-blur-[2px] text-left px-8 lg:px-40">
       <!-- About Section -->
       <section id="about" class="min-h-screen py-10 relative">
         <div class="max-w-6xl mx-auto">
@@ -276,125 +286,404 @@
               </h3>
 
               <p class="text-gray-400 leading-relaxed">
-                I kicked off my web dev journey in 2022 while studying Computer
-                Science. Since then, I’ve been learning and building with HTML,
-                CSS, and JavaScript through self‑study and small projects.
+                I’ve been building web experiences for over a year, combining
+                Computer Science fundamentals with hands-on mastery of <span class="text-purple-400 font-semibold">frontend</span> web
+                development tools. I create clean, responsive interfaces with
+                smooth UX and maintainable code.
               </p>
 
               <p class="text-gray-400 leading-relaxed">
-                I'm a growing
-                <span class="text-purple-400 font-semibold"
-                  >Frontend Developer</span
-                >
-                focused on creating clean, responsive UI with good UX and
-                maintainable code.
+                I enjoy working on real-world projects, turning ideas into
+                polished websites and prototypes fast from concept to launch,
+                contributing wherever I can.
               </p>
 
               <p class="text-gray-400 leading-relaxed">
-                Currently building real‑world projects and learning modern tools
-                to deliver smooth experiences.
+                Always learning, always leveling up, and ready to tackle your
+                next project.
               </p>
 
               <p class="text-gray-400 leading-relaxed font-semibold">
                 <span class="text-purple-400 font-semibold">My toolbox:</span>
               </p>
 
+              <!-- My toolbox -->
               <div class="text-white text-xs">
-                <ul class="flex flex-wrap gap-4">
+                <ul class="flex flex-wrap gap-4 overflow-visible">
+                  <!-- HTML CARD -->
                   <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
                     <img src="/ASSETS/icons/html5.svg" class="w-5 h-5" />
                     <span>HTML5</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/4 -translate-y-1/2 -top-20 w-56 text-white p-2 rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 bg-black/90 backdrop-blur-lg"
+                    >
+                      <p class="font-semibold text-purple-400 text-xs">HTML</p>
+
+                      <p class="text-xs text-gray-200">
+                        Builds the structure of web pages. Built skills through
+                        MDN docs + real projects
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium">Proficiency: Advanced</span>
+                      </p>
+
+                      <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300 text-xs"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
 
+                  <!-- CSS CARD -->
                   <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
                     <img src="/ASSETS/icons/css3.svg" class="w-5 h-5" />
                     <span>CSS3</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-400 text-xs">CSS3</p>
+
+                      <p class="text-xs">
+                        Styles layouts, responsible for visuals +
+                        responsiveness.
+                      </p>
+
+                      <p class="text-gray-300 pb-4">
+                        <span class="font-medium text-xs"
+                          >Proficiency: Intermediate</span
+                        >
+                      </p>
+
+                      <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
 
+                  <!-- TAILWIND CARD -->
                   <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="skill-car relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
-                    <img src="/ASSETS/icons/tailwind.svg" class="w-7 h-7" />
+                    <img src="/ASSETS/icons/tailwind.svg" class="w-5 h-5" />
                     <span>Tailwind</span>
-                  </li>
-                  <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
-                  >
-                    <img
-                      src="/ASSETS/icons/js.svg"
-                      class="w-5 h-5 rounded-full"
-                    />
-                    <span>JavaScript</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/4 -translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 text-justify rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-400 text-xs">
+                        Tailwind CSS
+                      </p>
+
+                      <p class="text-xs">
+                        Utility-first CSS framework for fast UI building.
+                      </p>
+
+                      <p class="text-gray-300 pb-4">
+                        <span class="font-medium text-xs"
+                          >Proficiency: Intermediate</span
+                        >
+                      </p>
+
+                      <a
+                        href="https://tailwindcss.com/"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
 
+                  <!-- JS CARD -->
                   <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="skill-car relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/js.svg" class="w-5 h-5" />
+                    <span>JavaScript</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-300 text-xs">
+                        JavaScript ES6+
+                      </p>
+
+                      <p class="text-xs">
+                        JavaScript is the Web's native programming language.
+                        Upskilled using resources like MDN docs and Udemy.
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium"
+                          >Proficiency: Intermediate</span
+                        >
+                      </p>
+
+                      <a
+                        href="https://play.tailwindcss.com/"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
+                  </li>
+
+                  <!-- REACT CARD -->
+                  <li
+                    class="relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
                     <img src="/ASSETS/icons/react.svg" class="w-5 h-5" />
-                    <span>ReactJS</span>
+                    <span>React</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/4 -translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 text-justify rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-400 text-xs">
+                        ReactJS
+                      </p>
+
+                      <p class="text-xs">
+                        Component-based JS library for building dynamic UIs.
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium">Proficiency: Beginner</span>
+                      </p>
+
+                      <a
+                        href="https://react.dev/learn"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
+
+                  <!-- SEO CARD -->
                   <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
                     <img
                       src="/ASSETS/icons/seo.svg"
-                      class="w-5 h-5 bg-white p-1 rounded-full"
+                      class="w-5 h-5 bg-white rounded-full p-0.5"
                     />
                     <span>SEO Optimization</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/4 -translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-400 text-xs">
+                        Search Engine Optimization
+                      </p>
+
+                      <p class="text-xs">
+                        Boosts discoverability on search engines via structure
+                        and keywords.
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium"
+                          >Proficiency: Intermediate</span
+                        >
+                      </p>
+
+                      <a
+                        href="https://play.tailwindcss.com/"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
+
+                  <!-- GIT CARD -->
                   <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
-                    <img src="/ASSETS/icons/git.svg" class="w-6 h-6" />
+                    <img src="/ASSETS/icons/git.svg" class="w-5 h-5" />
                     <span>Git</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/4 -translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 text-justify rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-400 text-xs">GIT</p>
+
+                      <p class="text-xs">
+                        Version control system for tracking and managing code.
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium"
+                          >Proficiency: Intermediate</span
+                        >
+                      </p>
+
+                      <a
+                        href="https://git-scm.com/learn"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
+
+                  <!-- GITHUB CARD -->
                   <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="skill-car relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
                     <img
                       src="/ASSETS/icons/github.svg"
-                      class="w-5 h-5 bg-white p-1 rounded-full"
+                      class="w-5 h-5 bg-white rounded-full p-0.5"
                     />
                     <span>GitHub</span>
-                  </li>
-                  <li
-                    class="border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
-                  >
-                    <img src="/ASSETS/icons/vscode.svg" class="w-5 p-0.5 h-5" />
-                    <span>VS Code</span>
-                  </li>
-                  <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
-                  >
-                    <img
-                      src="/ASSETS/icons/php.svg"
-                      class="w-5 h-5 rounded-full"
-                    />
-                    <span>PHP</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-400 text-xs">
+                        GitHub
+                      </p>
+
+                      <p class="text-xs">
+                        Cloud repo hosting and collaboration for Git projects.
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium"
+                          >Proficiency: Intermediate</span
+                        >
+                      </p>
+
+                      <a
+                        href="https://docs.github.com/"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
 
+                  <!-- VS CODE CARD -->
                   <li
-                    class="skill-card border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="skill-car relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                  >
+                    <img src="/ASSETS/icons/vscode.svg" class="w-5 h-5 p-0.5" />
+                    <span>VS Code</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/4 translate-y-1/2 -top-20 w-56 bg-black/90 text-white pl-2 py-2 rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-400 text-xs">
+                        Visual Studio Code
+                      </p>
+
+                      <p class="text-xs">
+                        Main code editor; fast, extensible, dev-friendly.
+                        Learned from constant personal practice.
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium">Proficiency: Advanced</span>
+                      </p>
+
+                      <a
+                        href="https://code.visualstudio.com/docs"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
+                  </li>
+
+                  <!-- FIGMA CARD -->
+                  <li
+                    class="relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
                     <img src="/ASSETS/icons/figma.svg" class="w-5 h-5" />
-                    <span>Figma</span
-                    ><span class="text-gray-400 text-[11px]"
-                      >(integration)</span
+                    <span>Figma</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/4 translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
                     >
+                      <p class="font-semibold text-purple-300 text-xs">
+                        Design → Code
+                      </p>
+
+                      <p class="text-xs">
+                        Translating Figma UI into responsive, clean code.
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium"
+                          >Proficiency: Intermediate</span
+                        >
+                      </p>
+
+                      <a
+                        href="https://www.frontendmentor.io/"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
 
+                  <!-- VERDEL CARD -->
                   <li
-                    class="border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
+                    class="relative group border p-2 border-white/20 rounded-md cursor-pointer hover:bg-white/10 transition duration-300 flex items-center gap-2"
                   >
                     <img
                       src="/ASSETS/icons/vercel.svg"
                       class="w-5 h-5 bg-white rounded-full p-0.5"
                     />
                     <span>Vercel</span>
+
+                    <div
+                      class="hidden md:block opacity-0 absolute left-1/2 -translate-x-1/4 translate-y-1/2 -top-20 w-56 bg-black/90 text-white p-3 rounded-md scale-50 pointer-events-auto group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50 space-y-3 border border-white/20 backdrop-blur-md"
+                    >
+                      <p class="font-semibold text-purple-300 text-xs">
+                        Vercel
+                      </p>
+
+                      <p class="text-xs">
+                        Hosting platform for front-end frameworks.
+                      </p>
+
+                      <p class="text-gray-300 pb-4 text-xs">
+                        <span class="font-medium"
+                          >Proficiency: Intermediate
+                        </span>
+                      </p>
+
+                      <a
+                        href="https://vercel.com/docs"
+                        target="_blank"
+                        class="text-purple-400 hover:underline hover:text-purple-300"
+                      >
+                        Learn →
+                      </a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -478,7 +767,6 @@
               </h3>
               <ul class="space-y-4 text-gray-300 text-sm list-disc">
                 <li>Deploy to Vercel & Netlify</li>
-                <li>Domain Setup</li>
                 <li>Continuous Integration (CI) Setup</li>
               </ul>
             </div>
@@ -508,116 +796,230 @@
               >Work & Projects</span
             >
           </h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- Project 1 -->
+          <!-- GRID -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- PROJECT CARD 1 -->
             <div
-              class="group relative bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-500/50 rounded-xl overflow-hidden transition-all duration-300 shadow-md hover:shadow-purple-700/10"
+              class="group bg-white/5 rounded-2xl overflow-hidden border border-white/10 p-2 pb-4 cursor-default"
             >
-              <div class="relative h-52 overflow-hidden">
-                <a href="https://uceeschool.vercel.app/" target="_blank">
-                  <img
-                    src="/ASSETS/images/school_image.png"
-                    alt="U-CEE School Website"
-                    class="absolute inset-0 w-full h-full object-cover object-bottom-right scale-150 group-hover:scale-[1.6] transition-transform duration-700"
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"
-                  ></div>
-                </a>
+              <!-- Mockup -->
+              <div
+                class="relative h-[360px] bg-[#111] rounded-lg overflow-hidden border border-white/5 group-hover:border-purple-500/20 transition-all duration-300"
+              >
+                <!-- Dark overlay to soften video -->
+                <div class="absolute inset-0 bg-black/30 z-10"></div>
+
+                <img
+                  src="./ASSETS/images/Macbook-Air-uceeschool.vercel.app.png"
+                  alt=""
+                  class="absolute bg-gradient-to-r from-white/40 to-black/50 inset-0 w-full h-full object-contain scale-105 group-hover:scale-110 transition-all duration-500"
+                />
               </div>
 
-              <div class="skill-card p-6 group-hover:bg-black">
+              <!-- Info -->
+              <div class="mt-6 px-4">
                 <h3
-                  class="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
+                  class="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
                 >
-                  School Website
+                  Interactive Educational Website
                 </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                  Designed, developed, and optimized the official website for
-                  U-CEE School, a Nigerian-based institution dedicated to
-                  academic excellence.
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-5 truncate">
+                  Designed and developed the official website for a Nigerian
+                  based Educational institution using a clean, responsive and
+                  modern layout. Reduced office overcrowdedness by a huge
+                  margin, simplified registration process.
                 </p>
 
-                <!-- Tech Stack Badges -->
-                <div class="flex flex-wrap gap-2 mb-4">
+                <!-- Tech tags -->
+                <div class="flex flex-wrap gap-2 mb-6">
                   <span
-                    class="bg-purple-600/20 text-purple-300 text-xs px-2 py-1 rounded-full"
-                    >HTML5</span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >HTML</span
                   >
                   <span
-                    class="bg-purple-600/20 text-purple-300 text-xs px-2 py-1 rounded-full"
-                    >CSS3</span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >CSS</span
                   >
                   <span
-                    class="bg-purple-600/20 text-purple-300 text-xs px-2 py-1 rounded-full"
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
                     >JavaScript</span
                   >
                   <span
-                    class="bg-purple-600/20 text-purple-300 text-xs px-2 py-1 rounded-full"
-                    >FormSpree</span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >XML Sitemaps</span
                   >
                 </div>
 
-                <!-- CTA -->
                 <a
-                  href="https://uceeschool.vercel.app/"
+                  href="https://uceeschool.vercel.app"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center text-purple-400 hover:text-purple-300 hover:underline font-medium text-sm transition"
+                  class="text-purple-400 text-sm font-medium hover:underline"
                 >
                   View Project →
                 </a>
               </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- PROJECT CARD 2 -->
             <div
-              class="group relative bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-500/50 rounded-xl overflow-hidden transition-all duration-300 shadow-md hover:shadow-purple-700/10"
+              class="group bg-white/5 rounded-2xl overflow-hidden border border-white/10 p-1 pb-4 cursor-default"
             >
-              <!-- Image Section: Shows only bottom-right part -->
-              <div class="relative h-52 overflow-hidden">
-                <a href="https://mindflow-rouge.vercel.app/" target="_blank">
-                  <img
-                    src="/ASSETS/images/mindflow_ai.png"
-                    alt="MindFlow AI Project"
-                    class="absolute inset-0 w-full h-full object-cover object-bottom-right scale-150 group-hover:scale-[1.6] transition-transform duration-700"
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-300"
-                  ></div>
-                </a>
+              <!-- Mockup -->
+              <div
+                class="relative h-[360px] bg-[#111] rounded-lg overflow-hidden border border-white/5 group-hover:border-purple-500/20 transition-all duration-300"
+              >
+                <img
+                  src="/ASSETS/images/m4uMockUp.png"
+                  class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-125 transition-all duration-500"
+                />
               </div>
 
-              <div class="skill-card p-6 group-hover:bg-black">
+              <!-- Info -->
+              <div class="mt-6 px-4">
                 <h3
-                  class="text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
+                  class="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
                 >
-                  MindFlow
+                  Made4You – Local Brands Shop
                 </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                  A sleek frontend prototype for a fictional AI productivity
-                  tool, built with Tailwind CSS to showcase responsive design
-                  and clean UI components.
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-5 truncate">
+                  Made4You is a modern e-commerce platform built to spotlight
+                  Nigerian brands and connect them directly with conscious
+                  shoppers. It features a clean UI, category-based browsing,
+                  partner onboarding, user authentication flows, and a
+                  mobile-first shopping experience
                 </p>
 
-                <!-- Tech Stack Badges -->
-                <div class="flex flex-wrap gap-2 mb-4">
+                <!-- Tech tags -->
+                <div class="flex flex-wrap gap-2 mb-6">
                   <span
-                    class="bg-purple-600/20 text-purple-300 text-xs px-2 py-1 rounded-full"
-                    >HTML5</span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >JavaScript</span
                   >
                   <span
-                    class="bg-purple-600/20 text-purple-300 text-xs px-2 py-1 rounded-full"
-                    >Tailwind CSS</span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >TailwindCSS</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >Firebase Auth</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >Vercel</span
                   >
                 </div>
 
-                <!-- CTA -->
                 <a
-                  href="https://mindflow-rouge.vercel.app/"
+                  href="https://mindflow-rouge.vercel.app"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center text-purple-400 hover:text-purple-300 hover:underline font-medium text-sm transition"
+                  class="text-purple-400 text-sm font-medium hover:underline"
+                >
+                  View Project →
+                </a>
+              </div>
+            </div>
+
+            <!-- PROJECT CARD 3 -->
+            <div
+              class="group bg-white/5 rounded-2xl overflow-hidden border border-white/10 p-1 pb-4 cursor-default"
+            >
+              <!-- Mockup -->
+              <div
+                class="relative h-[360px] bg-[#111] rounded-lg overflow-hidden border border-white/5 group-hover:border-purple-500/20 transition-all duration-300"
+              >
+                <img
+                  src="/ASSETS/images/mindflowMockUp.png"
+                  class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-125 transition-all duration-500"
+                />
+              </div>
+
+              <!-- Info -->
+              <div class="mt-6 px-4">
+                <h3
+                  class="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
+                >
+                  MindFlowAI – Landing Page
+                </h3>
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-5 truncate">
+                  A sleek frontend prototype for a fictional AI productivity
+                  tool showcasing clean UI layouts built with Tailwind.
+                </p>
+
+                <!-- Tech tags -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >Tailwind</span
+                  >
+                </div>
+
+                <a
+                  href="https://mindflow-rouge.vercel.app"
+                  target="_blank"
+                  class="text-purple-400 text-sm font-medium hover:underline"
+                >
+                  View Project →
+                </a>
+              </div>
+            </div>
+
+            <!-- PROJECT CARD 4 -->
+            <div
+              class="group bg-white/5 rounded-2xl overflow-hidden border border-white/10 p-1 pb-4 cursor-default"
+            >
+              <!-- Mockup -->
+              <div
+                class="relative h-[360px] bg-[#111] rounded-lg overflow-hidden border border-white/5 group-hover:border-purple-500/20 transition-all duration-300"
+              >
+                <img
+                  src="/ASSETS/images/tribearcMockUp.png"
+                  class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-125 transition-all duration-500"
+                />
+              </div>
+
+              <!-- Info -->
+              <div class="mt-6 px-4">
+                <h3
+                  class="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300"
+                >
+                  Tribearc (Prototype)
+                </h3>
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-5 truncate">
+                  A fast, clean frontend prototype built with Tailwind CSS.
+                  Fully responsive and polished, created in just 48 hours. This
+                  demo showcases UI for TribeArc, a Nigerian cooperative that
+                  supports local businesses with savings and emergency business
+                  wallets.
+                </p>
+
+                <!-- Tech tags -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >TailwindCSS</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full bg-purple-600/10 text-purple-300 text-xs"
+                    >JavaScript</span
+                  >
+                </div>
+
+                <a
+                  href="https://tribe-arc.vercel.app/"
+                  target="_blank"
+                  class="text-purple-400 text-sm font-medium hover:underline"
                 >
                   View Project →
                 </a>
@@ -642,7 +1044,7 @@
           <!-- Open source contribution -->
           <div class="mt-20 mb-10">
             <h2
-              class="text-xl md:text-2xl font-bold mb-8 gradient-text flex items-center gap-2"
+              class="text-xl md:text-2xl font-bold mb-8 text-purple-400 flex items-center gap-2"
             >
               Key Contributions
             </h2>
@@ -873,9 +1275,204 @@
         </div>
       </section>
     </div>
+    <!-- Social icons -->
+    <div
+      class="hidden lg:flex flex-col fixed top-1/2 left-2 -translate-y-1/2 space-y-4"
+    >
+      <div class="flex flex-col items-center gap-14">
+        <div>
+          <a href="https://github.com/Onwuka2007" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              class="mb-6"
+            >
+              <rect width="24" height="24" fill="none" />
+              <mask id="SVGtXXaGeHA" width="24" height="24" x="0" y="0">
+                <g fill="#fff">
+                  <ellipse cx="9.5" cy="9" rx="1.5" ry="1" />
+                  <ellipse cx="14.5" cy="9" rx="1.5" ry="1" />
+                </g>
+              </mask>
+              <g
+                fill="none"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  stroke-dasharray="32"
+                  stroke-dashoffset="32"
+                  d="M12 4c1.67 0 2.61 0.4 3 0.5c0.53 -0.43 1.94 -1.5 3.5 -1.5c0.34 1 0.29 2.22 0 3c0.75 1 1 2 1 3.5c0 2.19 -0.48 3.58 -1.5 4.5c-1.02 0.92 -2.11 1.37 -3.5 1.5c0.65 0.54 0.5 1.87 0.5 2.5c0 0.73 0 3 0 3M12 4c-1.67 0 -2.61 0.4 -3 0.5c-0.53 -0.43 -1.94 -1.5 -3.5 -1.5c-0.34 1 -0.29 2.22 0 3c-0.75 1 -1 2 -1 3.5c0 2.19 0.48 3.58 1.5 4.5c1.02 0.92 2.11 1.37 3.5 1.5c-0.65 0.54 -0.5 1.87 -0.5 2.5c0 0.73 0 3 0 3"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    dur="0.7s"
+                    values="32;0"
+                  />
+                </path>
+                <path
+                  stroke-dasharray="10"
+                  stroke-dashoffset="10"
+                  d="M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5"
+                >
+                  <animate
+                    attributeName="d"
+                    dur="3s"
+                    repeatCount="indefinite"
+                    values="M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5;M9 19c-1.406 0-3-.5-4-.5-.532 0-1 0-2-.5;M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5"
+                  />
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.8s"
+                    dur="0.2s"
+                    values="10;0"
+                  />
+                </path>
+              </g>
+              <rect
+                width="8"
+                height="4"
+                x="8"
+                y="11"
+                fill="#fff"
+                mask="url(#SVGtXXaGeHA)"
+              >
+                <animate
+                  attributeName="y"
+                  dur="10s"
+                  keyTimes="0;0.45;0.46;0.54;0.55;1"
+                  repeatCount="indefinite"
+                  values="11;11;7;7;11;11"
+                />
+              </rect>
+            </svg>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/emmanuel-onwuka-5a3a95303"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              class="mb-6"
+            >
+              <rect width="24" height="24" fill="none" />
+              <circle cx="4" cy="4" r="2" fill="#fff" fill-opacity="0">
+                <animate
+                  fill="freeze"
+                  attributeName="fill-opacity"
+                  dur="0.15s"
+                  values="0;1"
+                />
+              </circle>
+              <g
+                fill="none"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="4"
+              >
+                <path stroke-dasharray="12" stroke-dashoffset="12" d="M4 10v10">
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.15s"
+                    dur="0.2s"
+                    values="12;0"
+                  />
+                </path>
+                <path
+                  stroke-dasharray="12"
+                  stroke-dashoffset="12"
+                  d="M10 10v10"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.45s"
+                    dur="0.2s"
+                    values="12;0"
+                  />
+                </path>
+                <path
+                  stroke-dasharray="24"
+                  stroke-dashoffset="24"
+                  d="M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.65s"
+                    dur="0.2s"
+                    values="24;0"
+                  />
+                </path>
+              </g>
+            </svg>
+          </a>
+
+          <a href="https://youtube.com/@themannyverse" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              class="mb-6"
+            >
+              <rect width="24" height="24" fill="none" />
+              <path fill="#fff" fill-opacity="0" d="M12 11L12 12L12 13z">
+                <animate
+                  fill="freeze"
+                  attributeName="d"
+                  begin="0.6s"
+                  dur="0.2s"
+                  values="M12 11L12 12L12 13z;M10 8.5L16 12L10 15.5z"
+                />
+                <set
+                  fill="freeze"
+                  attributeName="fill-opacity"
+                  begin="0.6s"
+                  to="1"
+                />
+              </path>
+              <path
+                fill="none"
+                stroke="#fff"
+                stroke-dasharray="64"
+                stroke-dashoffset="64"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 5c9 0 9 0 9 7c0 7 0 7 -9 7c-9 0 -9 0 -9 -7c0 -7 0 -7 9 -7Z"
+              >
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  dur="0.6s"
+                  values="64;0"
+                />
+              </path>
+            </svg>
+          </a>
+        </div>
+
+        <p class="-rotate-90 text-gray-500 text-md tracking-widest">
+          MY SOCIALS
+        </p>
+      </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-white/10 text-[13px]">
+    <footer class="py-8 px-10 md:px-20 border-t border-white/10 text-[13px]">
       <div
         class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
       >
@@ -883,14 +1480,10 @@
           © <span id="year"></span>
           <a href="#" class="gradient-text">MANNYVERSE.</a> All rights reserved.
         </div>
-        <div class="flex gap-6 text-gray-400">
-          <a href="#" class="hover:text-purple-400 transition-colors"
-            >Privacy Policy</a
-          >
-          <a href="#" class="hover:text-purple-400 transition-colors"
-            >Terms of Service</a
-          >
-        </div>
+
+        <p class="capitalize text-bold text-gray-400 text-sm">
+          "Turning Ideas into Code, Code Into Art"
+        </p>
       </div>
     </footer>
 

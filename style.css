@@ -38,7 +38,7 @@ input:-webkit-autofill {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-12px);
   }
 }
 .image-movement {
@@ -105,4 +105,3 @@ input:-webkit-autofill {
 .skill-card:hover::after {
   left: 100%;
 }
-
